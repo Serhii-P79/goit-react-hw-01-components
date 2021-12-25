@@ -1,6 +1,13 @@
-import { Profile, Statistics } from 'components';
+import {
+  Profile,
+  Statistics,
+  FriendList,
+  TransactionHistory,
+} from 'components';
 import users from 'json/user.json';
 import data from 'json/data.json';
+import friends from 'json/friends.json';
+import transactions from 'json/transactions.json';
 
 export function App() {
   return (
@@ -13,6 +20,8 @@ export function App() {
         stats={users.stats}
       />
       <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { StatisticsItem, StatisticsITitle } from 'components';
 
 export function Statistics({ title = 'Upload stats', stats }) {
-  console.log(stats);
+  // console.log(stats);
   return (
     <section className="statistics">
       <StatisticsITitle title={title} />

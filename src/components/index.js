@@ -4,3 +4,6 @@ export * from 'components/Statistics/Statistics';
 export * from 'components/StatisticsItem/StatisticsItem';
 export * from 'components/StatisticsITitle/StatisticsITitle';
 export * from 'components/FriendList/FriendList';
+export * from 'components/FriendListItem/FriendListItem';
+export * from 'components/TransactionHistory/TransactionHistory';
+export * from 'components/TransactionItem/TransactionItem';
