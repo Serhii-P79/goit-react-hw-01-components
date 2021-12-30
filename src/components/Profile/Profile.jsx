@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import defaultAvatar from 'img/no-avatar.png';
+import { Profiles } from 'components';
 
 export function Profile({
   username,
@@ -9,7 +10,7 @@ export function Profile({
   stats,
 }) {
   return (
-    <div className="profile">
+    <Profiles>
       <div className="description">
         <img src={avatar} alt="User avatar" className="avatar" />
         <p className="name">{username}</p>
@@ -31,7 +32,7 @@ export function Profile({
           <span className="quantity">{stats.likes}</span>
         </li>
       </ul>
-    </div>
+    </Profiles>
   );
 }
 

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { StatisticsItemCss } from 'components';
 
-export function StatisticsItem({ label, percentage }) {
+export function StatisticsItem({ label, percentage, color }) {
   return (
-    <li className="item">
+    <StatisticsItemCss color={color}>
       <span className="label">{label}</span>
       <span className="percentage">{percentage}%</span>
-    </li>
+    </StatisticsItemCss>
   );
 }
 

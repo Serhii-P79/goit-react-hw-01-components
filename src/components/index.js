@@ -7,3 +7,8 @@ export * from 'components/FriendList/FriendList';
 export * from 'components/FriendListItem/FriendListItem';
 export * from 'components/TransactionHistory/TransactionHistory';
 export * from 'components/TransactionItem/TransactionItem';
+export * from 'components/App/App.styled';
+export * from 'components/Profile/Profile.styled';
+export * from 'components/Statistics/Statistics.styled';
+export * from 'components/FriendListItem/FriendListItem.styled';
+export * from 'components/TransactionHistory/TransactionHistory.styled';
