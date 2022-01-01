@@ -1,23 +1,36 @@
 import PropTypes from 'prop-types';
-import { StatisticsItem, StatisticsITitle, StatisticsCss } from 'components';
+import {
+  StatisticsItem,
+  StatisticsITitle,
+  StatisticsCss,
+  StatisticsItemCss,
+} from 'components';
 import { getRandomHexColor } from 'function/function';
 
-export function Statistics({ title = 'Upload stats', stats }) {
+export function Statistics({ title = '', stats }) {
   // console.log(stats);
   return (
     <StatisticsCss>
-      <StatisticsITitle title={title} />
+      {title && <h2 className="title">{title}</h2>}
+
+      {/* {title && <StatisticsITitle title={title} />} */}
 
       <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => {
           return (
-            <StatisticsItem
-              key={id}
-              label={label}
-              percentage={percentage}
-              color={getRandomHexColor()}
-            />
+            <StatisticsItemCss color={getRandomHexColor()} key={id}>
+              <span className="label">{label}</span>
+              <span className="percentage">{percentage}%</span>
+            </StatisticsItemCss>
           );
+
+          // return (
+          //   <StatisticsItem
+          //     key={id}
+          //     label={label}
+          //     percentage={percentage}
+          //   />
+          // );
         })}
       </ul>
     </StatisticsCss>
@@ -26,5 +39,5 @@ export function Statistics({ title = 'Upload stats', stats }) {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(PropTypes.object),
+  stats: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

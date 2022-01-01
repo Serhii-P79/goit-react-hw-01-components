@@ -13,8 +13,15 @@ export function TransactionHistory({ items }) {
       </thead>
 
       <tbody>
-        {items.map(element => {
-          return <TransactionItem key={element.id} item={element} />;
+        {items.map(({ id, type, amount, currency }) => {
+          return (
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
+            </tr>
+          );
+          // return <TransactionItem key={element.id} item={element} />;
         })}
       </tbody>
     </TransactionHistoryCss>

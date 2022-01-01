@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { StatisticsItemCss } from 'components';
+import { getRandomHexColor } from 'function/function';
 
-export function StatisticsItem({ label, percentage, color }) {
+export function StatisticsItem({ label, percentage }) {
   return (
-    <StatisticsItemCss color={color}>
+    <StatisticsItemCss color={getRandomHexColor()}>
       <span className="label">{label}</span>
       <span className="percentage">{percentage}%</span>
     </StatisticsItemCss>
@@ -11,6 +12,6 @@ export function StatisticsItem({ label, percentage, color }) {
 }
 
 StatisticsItem.propTypes = {
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };

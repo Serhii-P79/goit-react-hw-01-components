@@ -17,7 +17,7 @@ export const TransactionHistoryCss = styled.table`
     /* background-color: fuchsia; */
   }
 
-  tr:nth-child(2n) {
+  tr:nth-of-type(2n) {
     background-color: #a5a4a4;
   }
 `;
