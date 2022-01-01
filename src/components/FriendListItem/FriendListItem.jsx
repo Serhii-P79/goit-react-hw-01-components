@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import defaultAvatar from 'img/no-avatar.png';
 import { FriendListItemCss } from 'components';
 
-export function FriendListItem({
-  element: { avatar = defaultAvatar, name, isOnline },
-}) {
+export function FriendListItem({ avatar = defaultAvatar, name, isOnline }) {
   return (
     <FriendListItemCss status={isOnline}>
       <span className="status"></span>
@@ -15,9 +13,7 @@ export function FriendListItem({
 }
 
 FriendListItem.propTypes = {
-  element: PropTypes.shape({
-    avatar: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
-  }),
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
